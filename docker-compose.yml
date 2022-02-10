@@ -36,8 +36,8 @@ services:
 
   facilemanager:
     build:
-      context: .
-      dockerfile: ./build-facilemanager/Dockerfile
+      context: ./build-facilemanager
+      dockerfile: Dockerfile
     hostname: ${fm_URL}
     container_name: ${COMPOSE_PROJECT_NAME}-web
     networks:
