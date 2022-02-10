@@ -35,9 +35,7 @@ services:
 #      - "traefik.http.routers.traefik-secure.service=api@internal"
 
   facilemanager:
-    build:
-      context: ./build-facilemanager
-      dockerfile: Dockerfile
+    image: mrmors/facilemanager:latest
     hostname: ${fm_URL}
     container_name: ${COMPOSE_PROJECT_NAME}-web
     networks:
@@ -99,6 +97,7 @@ services:
     build:
       context: .
       dockerfile: ./build-fmdns/Dockerfile
+    image: mrmors/fmdns:latest
     hostname: ${fmDNS_URL}
     container_name: ${COMPOSE_PROJECT_NAME}-bind9
     networks:
