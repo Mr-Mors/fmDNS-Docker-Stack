@@ -94,9 +94,6 @@ services:
 
 
   fmdns:
-    build:
-      context: .
-      dockerfile: ./build-fmdns/Dockerfile
     image: mrmors/fmdns:latest
     hostname: ${fmDNS_URL}
     container_name: ${COMPOSE_PROJECT_NAME}-bind9
@@ -112,11 +109,10 @@ services:
     #  - 80:80
     stop_grace_period: 1m
     restart: unless-stopped
-#    security_opt:
-#      - no-new-privileges:true
     environment:
       FACILE_MANAGER_HOST: ${fmDNS_Manager}
       FACILE_CLIENT_SERIAL_NUMBER: ${fmDNS_Serial}
+      FACILE_CLIENT_URL: ${fmDNS_URL}
     labels:
       - "traefik.port=80"
       - "traefik.enable=true"
