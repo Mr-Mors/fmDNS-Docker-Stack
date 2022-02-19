@@ -9,7 +9,7 @@ Secondary Goals:
 * Rebuilding a fmDNS container should reconnect to facileManager without user intervention and not create a duplicate
 
 ## Setup (facileManager and first fmDNS container)
-1. Clone this repo by running: ```git clone https://github.com/Mr-Mors/fmDNS-docker.git```
+1. Clone this repo by running: ```git clone https://github.com/Mr-Mors/fmDNS-Docker-Stack.git```
 
 1. Create acme.json file: ```touch traefik-data/acme.json```
 
