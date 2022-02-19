@@ -30,7 +30,7 @@ Secondary Goals:
 * COMPOSE_PROJECT_NAME = Names the project, all containers will have this prepended to their name.
 * MYSQL_* = Flags for MySQL Database
 * fm_URL = This is the external URL you plan to use to access the web management interface
-* fmDNS_URL = This is the DNS name you plan to use for this DNS server. 
+* fmDNS_URL = This is the DNS name that facileManager will use to contact the fmDNS container. This can be a FQDN or just the docker hostname if on same docker host.
 * fmDNS_Manager = The DNS name of the facileManager that fmDNS should use to find facileManager. If the containers are in the same docker network, then use “dns”. Otherwise use the FQDN
 * fmDNS_Serial = The serial number for this instance of fmDNS. This needs to be unique on each instance.
 * fmDNS_External_IP = This is the IP docker will bind and forward to the fmDNS instance for port 53 TCP/UDP
